@@ -44,3 +44,26 @@
     - Phase 2: LOAgent 코어 및 다양한 확장 도구(Tool) 구현
     - Phase 3: Streamlit 기반 통합 대시보드(Wiki Viewer, Agent Chat) 구축
     - Phase 4: LOCoder 코딩 에이전트 (코드 편집/테스트/Git 도구 7종 + 전용 UI)
+
+## 🛠️ 작업 재개 및 테스트 가이드
+
+### 1. 환경 설정 (최초 실행 시)
+- `.env` 및 `kb/.env` 파일의 `LLM_BASE_URL`을 실제 사내 URL로 수정하십시오.
+- `pip install -r requirements.txt`로 의존성을 설치하십시오.
+
+### 2. 위키 구축
+- DRM 해제된 문서를 특정 폴더에 넣고 `python convert_docs.py --input [폴더] --output ./kb/raw/` 실행
+- `cd kb; $env:PYTHONIOENCODING='utf-8'; openkb add raw/` 실행하여 지식 베이스 구축
+
+### 3. 시스템 실행
+- **통합 UI**: `streamlit run app/main.py`
+- **에이전트 단독 (CLI)**: `python -m agent.core` 또는 `python -m agent.coding_agent`
+
+### 4. 기능 검증
+- LLM 연결 전 도구 로직 확인: `python test_tools_mock.py` 실행
+- LLM 연결 상태 확인: `python test_connection.py` 실행
+
+## 🔗 주요 문서
+- [README.md](README.md): 전체 시스템 설치 및 실행 가이드
+- [AGENT_GUIDE.md](AGENT_GUIDE.md): LOAgent 및 LOCoder 사용법, 도구 추가 방법
+- [test_tools_mock.py](test_tools_mock.py): LLM 없이 도구 단독 작동 여부 검증 스크립트

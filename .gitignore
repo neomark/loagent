@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+.env
+
+# Data and Cache
+data/
+kb/raw/
+kb/wiki/*
+!kb/wiki/AGENTS.md
+kb/.openkb/
+!kb/.openkb/config.yaml
+
+# IDEs
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/

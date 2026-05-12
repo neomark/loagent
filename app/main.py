@@ -16,6 +16,7 @@ st.markdown("""
 
 1. **📚 Wiki Viewer**: OpenKB 기반 사내 지식 베이스 열람 및 검색
 2. **💬 Agent Chat**: LOAgent와 대화하며 다양한 자동화 작업 수행 (위키 검색, 파일 처리, 코드 실행 등)
+3. **👨‍💻 Coding Chat**: LOCoder로 소스 코드 분석, 편집, 테스트를 자동 수행
 
 ---
 #### 현재 시스템 상태

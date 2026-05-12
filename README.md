@@ -106,3 +106,4 @@ streamlit run app/main.py
 
 1. **Wiki Viewer**: 구축된 지식 베이스를 열람하고, `openkb query` 기반의 질의응답(RAG)을 수행합니다.
 2. **Agent Chat**: LOAgent와 대화하며, 에이전트가 스스로 파일을 분석하거나, 위키를 검색하거나, 터미널 명령을 실행하여 복잡한 업무를 대신 처리하도록 지시할 수 있습니다.
+3. **Coding Chat**: 코딩 전문 에이전트(LOCoder)를 통해 소스 코드 분석, 수정, 테스트를 자동화할 수 있습니다.
